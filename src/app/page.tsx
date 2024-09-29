@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
 
 export default function Home() {
   return (
@@ -46,7 +45,6 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
             <p className="mb-8">Stay updated with our latest travel deals and inspiration.</p>
             <div className="flex max-w-md mx-auto">
-              <Input type="email" placeholder="Enter your email" className="rounded-r-none" />
               <Button className="rounded-l-none">Subscribe</Button>
             </div>
           </div>
