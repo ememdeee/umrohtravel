@@ -1,10 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 @layer utilities {
   .text-balance {
@@ -66,13 +64,15 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+}
+
+/* custom CSS */
+.absolute.right-4.top-4.rounded-sm.opacity-70.ring-offset-background.transition-opacity.hover\:opacity-100.focus\:outline-none.focus\:ring-2.focus\:ring-ring.focus\:ring-offset-2.disabled\:pointer-events-none.data-\[state\=open\]\:bg-secondary {
+  display: none !important; /* removing x btn in sheet component for navbar */
 }

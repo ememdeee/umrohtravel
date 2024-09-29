@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { Button } from '@/components/ui/button'
+import TravelSlider from '@/components/TravelSlider'
 
 export default function Home() {
   return (
@@ -9,17 +10,9 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="relative h-[70vh] bg-cover bg-center" style={{backgroundImage: "url('/placeholder.svg?height=700&width=1200')"}}>
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">Discover Your Next Adventure</h1>
-              <p className="text-xl mb-8">Explore the world with Poetry Travel</p>
-              <Button className="bg-white text-black hover:bg-gray-200">Start Your Journey</Button>
-            </div>
-          </div>
-        </section>
-
+        {/* Hero slider Section */}
+        <TravelSlider />
+        
         {/* Featured Destinations */}
         <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4">
