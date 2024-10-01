@@ -13,21 +13,21 @@ interface SlideProps {
 
 const slides: SlideProps[] = [
   {
-    imageUrl: '/placeholder.svg?height=900&width=1600&text=Umroh',
+    imageUrl: '/umrohTravelSlider-1.webp',
     headingText: 'Travel Umroh & Haji Khusus Sesuai Sunnah',
     paragraphText: 'Explore the world with Poetry Travel',
     buttonText: 'Start Your Journey',
     buttonLink: '/journey'
   },
   {
-    imageUrl: '/placeholder.svg?height=900&width=1600&text=Sacred+Places',
+    imageUrl: '/umrohTravelSlider-2.webp',
     headingText: 'Discover Sacred Places',
     paragraphText: 'Experience spiritual journeys like never before',
     buttonText: 'Learn More',
     buttonLink: '/discover'
   },
   {
-    imageUrl: '/placeholder.svg?height=900&width=1600&text=Pilgrimage',
+    imageUrl: '/umrohTravelSlider-3.webp',
     headingText: 'Personalized Pilgrimage',
     paragraphText: 'Tailored experiences for your spiritual growth',
     buttonText: 'Plan Your Trip',
@@ -37,10 +37,10 @@ const slides: SlideProps[] = [
 
 const Slide: React.FC<SlideProps> = ({ imageUrl, headingText, paragraphText, buttonText, buttonLink }) => {
   return (
-    <section className="relative h-[90vh] bg-cover bg-center" style={{backgroundImage: `url('${imageUrl}')`}}>
+    <section className="relative h-[100vh] bg-cover bg-center" style={{backgroundImage: `url('${imageUrl}')`}}>
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <div className="text-center text-white max-w-3xl px-4">
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-4">
+          <h1 className="scroll-m-20 text-4xl tracking-tight lg:text-5xl mb-4">
             {headingText}
           </h1>
           <p className="leading-7 [&:not(:first-child)]:mt-6 mb-8">
@@ -48,7 +48,7 @@ const Slide: React.FC<SlideProps> = ({ imageUrl, headingText, paragraphText, but
           </p>
           <Button 
             variant="outline" 
-            className="px-6 py-3 text-lg font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+            className="px-6 py-3 text-lg border-2 border-white text-black hover:bg-white hover:text-orange-500 transition-colors duration-300"
             asChild
           >
             <a href={buttonLink}>{buttonText}</a>
@@ -71,7 +71,7 @@ export default function TravelSlider() {
   }, [])
 
   return (
-    <div className="relative overflow-hidden w-full h-[90vh]">
+    <div className="relative overflow-hidden w-full h-[100vh]">
       {slides.map((slide, index) => (
         <div
           key={index}
