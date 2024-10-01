@@ -8,7 +8,7 @@ import DestinationShowcase from '@/components/destination-showcase'
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen font-satoshi">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
 
       <main className="flex-grow">

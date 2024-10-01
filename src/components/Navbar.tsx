@@ -105,7 +105,7 @@ export function Navbar() {
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="text-md font-medium text-gray-700 hover:text-orange-500 transition-colors duration-200"
+                          className="text-md text-gray-700 hover:text-orange-500 transition-colors duration-200"
                         >
                           {item.name}
                         </Link>
@@ -117,7 +117,7 @@ export function Navbar() {
                       </SheetClose>
                       <span className="text-sm text-gray-700">+62 851 5533 4644</span>
                       <User className="h-5 w-5 text-gray-700 cursor-pointer" />
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium px-4 py-2">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-white text-sm px-4 py-2">
                         Start planning
                       </Button>
                     </div>
@@ -140,7 +140,7 @@ export function Navbar() {
                       {menuItems.find(item => item.name === activeMenuItem)?.items.map((subItem) => (
                         <Link key={subItem.name} href={subItem.href} className="block">
                           <div className="relative aspect-[3/4] overflow-hidden rounded-md">
-                            <img src={subItem.image} alt={subItem.name} className="w-full h-full object-cover" />
+                            <Image src={subItem.image} alt={subItem.name} layout="fill" objectFit="cover" />
                             <div className="absolute inset-0 bg-black bg-opacity-30 flex items-end p-2">
                               <span className="text-white font-medium">{subItem.name}</span>
                             </div>
